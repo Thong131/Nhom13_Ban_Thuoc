@@ -1,0 +1,30 @@
+﻿@model GameStore.Models.HealthCheck
+
+@{
+    ViewBag.Title = "Kết Quả Kiểm Tra";
+}
+
+<h2>Kết Quả Kiểm Tra Sức Khỏe</h2>
+
+<p>Giới Tính: @Model.Gender</p>
+<p>Chiều Cao: @Model.Height cm</p>
+<p>Cân Nặng: @Model.Weight kg</p>
+<p>Chỉ Số BMI: @Model.BMI</p>
+
+@if (Model.BMI < 18.5)
+{
+    <p>Trạng Thái: Gầy</p>
+}
+else if (Model.BMI >= 18.5 && Model.BMI < 24.9)
+{
+    <p>Trạng Thái: Bình Thường</p>
+}
+else if (Model.BMI >= 25 && Model.BMI < 29.9)
+{
+    <p>Trạng Thái: Thừa Cân</p>
+}
+else
+{
+    <p>Trạng Thái: Béo Phì</p>
+}
+

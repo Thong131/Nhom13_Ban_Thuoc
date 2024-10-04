@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cd387a382b8649219d0b4ad3f2e41023" Name="Diagram1">
+        <EntityTypeShape EntityType="QLThuocSo1VNModel.Benh" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuocSo1VNModel.BinhLuan" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuocSo1VNModel.ChiTietDonHang" Width="1.5" PointX="8.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuocSo1VNModel.ChiTietGioHang" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuocSo1VNModel.DanhGia" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuocSo1VNModel.DanhMuc" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuocSo1VNModel.DonHang" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuocSo1VNModel.GioHang" Width="1.5" PointX="5.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuocSo1VNModel.HinhAnh" Width="1.5" PointX="5.25" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuocSo1VNModel.KhuyenMai" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuocSo1VNModel.NguoiDung" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuocSo1VNModel.NhaCungCap" Width="1.5" PointX="0.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuocSo1VNModel.PhanQuyen" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuocSo1VNModel.SanPham" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuocSo1VNModel.ThanhToan" Width="1.5" PointX="8.25" PointY="5.5" IsExpanded="true" />
+        <AssociationConnector Association="QLThuocSo1VNModel.FK__SanPham__maBenh__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuocSo1VNModel.FK__BinhLuan__MaNguo__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuocSo1VNModel.FK__BinhLuan__maSP__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuocSo1VNModel.FK__ChiTietDon__maDH__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuocSo1VNModel.FK__ChiTietDon__maSP__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuocSo1VNModel.FK__ChiTietGio__maSP__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuocSo1VNModel.FK__DanhGia__MaNguoi__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuocSo1VNModel.FK__DanhGia__MaSanPh__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuocSo1VNModel.FK__SanPham__maDM__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuocSo1VNModel.FK__DonHang__maNguoi__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuocSo1VNModel.FK__ThanhToan__maDH__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuocSo1VNModel.FK__GioHang__maNguoi__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuocSo1VNModel.FK__HinhAnh__maSP__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuocSo1VNModel.FK__SanPham__MaKhuye__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuocSo1VNModel.FK__NguoiDung__roleI__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuocSo1VNModel.FK__SanPham__MaNhaCu__44FF419A" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

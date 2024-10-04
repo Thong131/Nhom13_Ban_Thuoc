@@ -1,0 +1,73 @@
+﻿@model GameStore.Models.HealthCheck
+
+@{
+    ViewBag.Title = "Kiểm Tra Sức Khỏe";
+}
+
+<h2>Kiểm Tra Sức Khỏe</h2>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        margin: 20px;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    div {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    select, input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 10px 15px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        button:hover {
+            background-color: #218838;
+        }
+</style>
+
+@using (Html.BeginForm("Check", "HealthCheck", FormMethod.Post))
+{
+    <div>
+        <label>Giới Tính:</label>
+        @Html.DropDownListFor(m => m.Gender, new SelectList(new[]
+        {
+            new { Value = "", Text = "-- Chọn Giới Tính --" },
+            new { Value = "Male", Text = "Nam" },
+            new { Value = "Female", Text = "Nữ" }
+        }, "Value", "Text"), new { @required = "required" })
+    </div>
+    <div>
+        <label>Chiều Cao (cm):</label>
+        @Html.TextBoxFor(m => m.Height, new { @required = "required", @placeholder = "Nhập chiều cao" })
+    </div>
+    <div>
+        <label>Cân Nặng (kg):</label>
+        @Html.TextBoxFor(m => m.Weight, new { @required = "required", @placeholder = "Nhập cân nặng" })
+    </div>
+    <button type="submit">Kiểm Tra</button>
+}
