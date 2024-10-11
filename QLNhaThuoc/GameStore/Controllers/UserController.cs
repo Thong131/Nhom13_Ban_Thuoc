@@ -94,7 +94,7 @@ namespace GameStore.Controllers
                 NguoiDung check = db.NguoiDungs.FirstOrDefault(s => s.username == user.username);
                 if (check == null)
                 {
-                 
+
 
                     db.Configuration.ValidateOnSaveEnabled = false;
 
@@ -115,7 +115,7 @@ namespace GameStore.Controllers
 
         }
 
-         // Quên mật khẩu
+        // Quên mật khẩu
         public ActionResult ForgotPassword()
         {
             return View();
@@ -223,5 +223,56 @@ namespace GameStore.Controllers
 
             return View();
         }
+
+
+        // Quản lý thông tin cá nhân
+        // Quản lý thông tin cá nhân
+        public ActionResult Profile()
+        {
+            if (Session["userLogin"] == null)
+            {
+                return RedirectToAction("Login", "User");
+            }
+
+            string username = Session["userLogin"].ToString();
+            NguoiDung user = db.NguoiDungs.FirstOrDefault(u => u.username == username);
+
+            if (user == null)
+            {
+                return HttpNotFound(); // Trả về lỗi nếu không tìm thấy người dùng
+            }
+
+            return View(user);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Profile(NguoiDung model)
+        {
+            if (ModelState.IsValid)
+            {
+                // Tìm người dùng theo username từ session
+                string username = Session["userLogin"].ToString();
+                var user = db.NguoiDungs.FirstOrDefault(u => u.username == username);
+
+                if (user != null)
+                {
+                    user.hoTen = model.hoTen;
+                    user.email = model.email;
+                    user.sdt = model.sdt;
+                    db.Entry(user).State = EntityState.Modified;
+                    db.SaveChanges();
+                    ViewBag.Message = "Cập nhật thông tin thành công!";
+                }
+                else
+                {
+                    ViewBag.Error = "Không tìm thấy người dùng.";
+                }
+            }
+
+            // Nếu ModelState không hợp lệ hoặc không tìm thấy người dùng, trả về model để hiển thị lại dữ liệu
+            return View(model);
+        }
     }
 }
+

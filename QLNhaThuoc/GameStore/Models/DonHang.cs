@@ -28,7 +28,6 @@ namespace GameStore.Models
         public double tongTien { get; set; }
         public int soLuong { get; set; }
         public string trangThai { get; set; }
-        public string ghiChu { get; set; }
         public Nullable<System.DateTime> createdAt { get; set; }
         public Nullable<System.DateTime> updatedAt { get; set; }
         public Nullable<int> maNguoiDung { get; set; }
