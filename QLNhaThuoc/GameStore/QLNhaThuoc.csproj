@@ -191,6 +191,7 @@
     <Compile Include="Areas\Admin\Controllers\NguoiDungController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamController.cs" />
     <Compile Include="Common\Common.cs" />
+    <Compile Include="Controllers\Class1.cs" />
     <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
