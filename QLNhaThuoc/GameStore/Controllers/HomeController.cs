@@ -10,7 +10,7 @@ namespace GameStore.Controllers
 {
     public class HomeController : Controller
     {
-        QlNhaThuoc2Entities1 db = new QlNhaThuoc2Entities1();
+        QLThuocSo1VNNGAY1010Entities db = new QLThuocSo1VNNGAY1010Entities();
         public ActionResult Index()
         {
 

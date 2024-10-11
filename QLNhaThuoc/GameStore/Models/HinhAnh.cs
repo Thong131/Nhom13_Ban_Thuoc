@@ -19,6 +19,5 @@ namespace GameStore.Models
         public Nullable<int> maSP { get; set; }
     
         public virtual SanPham SanPham { get; set; }
-        public virtual SanPham SanPham1 { get; set; }
     }
 }

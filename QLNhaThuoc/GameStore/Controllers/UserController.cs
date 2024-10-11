@@ -13,7 +13,7 @@ namespace GameStore.Controllers
 {
     public class UserController : Controller
     {
-        QlNhaThuoc2Entities1 db = new QlNhaThuoc2Entities1();
+        QLThuocSo1VNNGAY1010Entities db = new QLThuocSo1VNNGAY1010Entities();
         //view
         public ActionResult Index()
         {
@@ -87,12 +87,14 @@ namespace GameStore.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Register(NguoiDung user)
         {
+            user.trangThai = "Chưa mua hàng";
+            user.roleID = 1;
             if (ModelState.IsValid)
             {
                 NguoiDung check = db.NguoiDungs.FirstOrDefault(s => s.username == user.username);
                 if (check == null)
                 {
-                    user.roleID = 1;
+                 
 
                     db.Configuration.ValidateOnSaveEnabled = false;
 

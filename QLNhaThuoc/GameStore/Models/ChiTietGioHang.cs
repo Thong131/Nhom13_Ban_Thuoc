@@ -15,13 +15,12 @@ namespace GameStore.Models
     public partial class ChiTietGioHang
     {
         public int id { get; set; }
-        public Nullable<int> maGioHang { get; set; }
+        public Nullable<int> maGH { get; set; }
         public Nullable<int> soLuongSP { get; set; }
         public Nullable<int> maSP { get; set; }
         public Nullable<int> tongTien { get; set; }
     
-        public virtual SanPham SanPham { get; set; }
         public virtual GioHang GioHang { get; set; }
-        public virtual SanPham SanPham1 { get; set; }
+        public virtual SanPham SanPham { get; set; }
     }
 }

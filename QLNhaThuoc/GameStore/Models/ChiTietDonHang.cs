@@ -20,9 +20,7 @@ namespace GameStore.Models
         public int soLuong { get; set; }
         public int tongTien { get; set; }
     
-        public virtual SanPham SanPham { get; set; }
         public virtual DonHang DonHang { get; set; }
-        public virtual SanPham SanPham1 { get; set; }
-        public virtual SanPham SanPham2 { get; set; }
+        public virtual SanPham SanPham { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace GameStore.Controllers
 {
     public class GioHangController : Controller
     {
-        QlNhaThuoc2Entities1 db = new QlNhaThuoc2Entities1();
+        QLThuocSo1VNNGAY1010Entities db = new QLThuocSo1VNNGAY1010Entities();
         // GET: GioHang
         public ActionResult Index()
         {

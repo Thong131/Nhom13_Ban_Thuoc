@@ -18,18 +18,26 @@ namespace GameStore.Models
         public DonHang()
         {
             this.ChiTietDonHangs = new HashSet<ChiTietDonHang>();
+            this.ThanhToans = new HashSet<ThanhToan>();
         }
     
         public string maDH { get; set; }
         public string username { get; set; }
         public string diachi { get; set; }
+        public int MaKhuyenMai { get; set; }
         public double tongTien { get; set; }
         public int soLuong { get; set; }
         public string trangThai { get; set; }
+        public string ghiChu { get; set; }
         public Nullable<System.DateTime> createdAt { get; set; }
         public Nullable<System.DateTime> updatedAt { get; set; }
+        public Nullable<int> maNguoiDung { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietDonHang> ChiTietDonHangs { get; set; }
+        public virtual KhuyenMai KhuyenMai { get; set; }
+        public virtual NguoiDung NguoiDung { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ThanhToan> ThanhToans { get; set; }
     }
 }

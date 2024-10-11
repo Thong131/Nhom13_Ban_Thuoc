@@ -13,7 +13,7 @@ namespace GameStore.Areas.Admin.Controllers
 {
     public class SanPhamController : Controller
     {
-        private QlNhaThuoc2Entities1 db = new QlNhaThuoc2Entities1();
+        private QLThuocSo1VNNGAY1010Entities db = new QLThuocSo1VNNGAY1010Entities();
 
         // GET: Admin/SanPham
         public ActionResult Index()

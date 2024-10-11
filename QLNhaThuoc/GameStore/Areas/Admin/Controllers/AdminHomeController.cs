@@ -9,7 +9,7 @@ namespace GameStore.Areas.Admin.Controllers
 {
     public class AdminHomeController : Controller
     {
-        QlNhaThuoc2Entities1 db = new QlNhaThuoc2Entities1();
+        QLThuocSo1VNNGAY1010Entities db = new QLThuocSo1VNNGAY1010Entities();
 
         // GET: Admin/Home
         public ActionResult Index()

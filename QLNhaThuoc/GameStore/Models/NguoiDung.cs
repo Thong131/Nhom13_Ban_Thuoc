@@ -17,21 +17,29 @@ namespace GameStore.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NguoiDung()
         {
+            this.BinhLuans = new HashSet<BinhLuan>();
+            this.DanhGias = new HashSet<DanhGia>();
+            this.DonHangs = new HashSet<DonHang>();
             this.GioHangs = new HashSet<GioHang>();
         }
     
         public int maNguoiDung { get; set; }
         public string username { get; set; }
+        public string trangThai { get; set; }
         public string hoTen { get; set; }
         public string email { get; set; }
         public string sdt { get; set; }
         public string matkhau { get; set; }
         public int roleID { get; set; }
-  
-
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BinhLuan> BinhLuans { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DanhGia> DanhGias { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DonHang> DonHangs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GioHang> GioHangs { get; set; }
         public virtual PhanQuyen PhanQuyen { get; set; }
-        public virtual PhanQuyen PhanQuyen1 { get; set; }
     }
 }

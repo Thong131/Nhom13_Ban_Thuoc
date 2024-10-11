@@ -12,7 +12,7 @@ namespace GameStore.Areas.Admin.Controllers
 {
     public class NguoiDungController : Controller
     {
-        QlNhaThuoc2Entities1 db = new QlNhaThuoc2Entities1();
+        QLThuocSo1VNNGAY1010Entities db = new QLThuocSo1VNNGAY1010Entities();
 
         // GET: Admin/NguoiDung
         public ActionResult Index()

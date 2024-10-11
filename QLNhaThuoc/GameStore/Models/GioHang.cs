@@ -20,7 +20,7 @@ namespace GameStore.Models
             this.ChiTietGioHangs = new HashSet<ChiTietGioHang>();
         }
     
-        public int maGioHang { get; set; }
+        public int maGH { get; set; }
         public Nullable<int> maNguoiDung { get; set; }
         public Nullable<int> soLuong { get; set; }
     

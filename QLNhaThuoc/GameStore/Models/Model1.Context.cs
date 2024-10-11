@@ -13,10 +13,10 @@ namespace GameStore.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QlNhaThuoc2Entities1 : DbContext
+    public partial class QLThuocSo1VNNGAY1010Entities : DbContext
     {
-        public QlNhaThuoc2Entities1()
-            : base("name=QlNhaThuoc2Entities1")
+        public QLThuocSo1VNNGAY1010Entities()
+            : base("name=QLThuocSo1VNNGAY1010Entities")
         {
         }
     
@@ -25,14 +25,21 @@ namespace GameStore.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Benh> Benhs { get; set; }
+        public virtual DbSet<BinhLuan> BinhLuans { get; set; }
         public virtual DbSet<ChiTietDonHang> ChiTietDonHangs { get; set; }
         public virtual DbSet<ChiTietGioHang> ChiTietGioHangs { get; set; }
+        public virtual DbSet<DanhGia> DanhGias { get; set; }
         public virtual DbSet<DanhMuc> DanhMucs { get; set; }
         public virtual DbSet<DonHang> DonHangs { get; set; }
+        public virtual DbSet<GiamGia> GiamGias { get; set; }
         public virtual DbSet<GioHang> GioHangs { get; set; }
         public virtual DbSet<HinhAnh> HinhAnhs { get; set; }
+        public virtual DbSet<KhuyenMai> KhuyenMais { get; set; }
         public virtual DbSet<NguoiDung> NguoiDungs { get; set; }
+        public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
         public virtual DbSet<PhanQuyen> PhanQuyens { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
+        public virtual DbSet<ThanhToan> ThanhToans { get; set; }
     }
 }
