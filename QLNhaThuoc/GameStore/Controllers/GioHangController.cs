@@ -17,11 +17,11 @@ namespace GameStore.Controllers
         {
             List<Cart> ShoppingCart = Session["ShoppingCart"] as List<Cart>;
             return View(ShoppingCart);
-        }   
+        }
         //Thêm sản phẩm vào giỏ hàng
         public RedirectToRouteResult AddToCart(int maSP)
         {
-          
+
             if (Session["ShoppingCart"] == null) // Nếu giỏ hàng chưa được khởi tạo
             {
                 Session["ShoppingCart"] = new List<Cart>();  // Khởi tạo Session["giohang"] là 1 List<CartItem>
@@ -33,13 +33,13 @@ namespace GameStore.Controllers
 
             if (ShoppingCart.FirstOrDefault(m => m.Id == maSP) == null) // ko co sp nay trong gio hang
             {
-              // tim sp theo sanPhamID
+                // tim sp theo sanPhamID
 
                 var sanpham = from sp in db.SanPhams
                               where sp.maSP == maSP
                               select sp;
 
-             var query=  sanpham.Include("HinhAnhs").ToList();
+                var query = sanpham.Include("HinhAnhs").ToList();
 
                 Cart newItem = new Cart()
                 {
@@ -60,10 +60,10 @@ namespace GameStore.Controllers
                 cardItem.Amount++;
             }
 
-            
-                return RedirectToAction("ChiTietSP", "games", new { id = maSP });
-            
-               
+
+            return RedirectToAction("ChiTietSP", "games", new { id = maSP });
+
+
         }
         //cập nhật sp trong giỏ hàng
         public RedirectToRouteResult UpdateAmount(int maSP, int newAmount)
@@ -111,14 +111,14 @@ namespace GameStore.Controllers
                 return RedirectToAction("Index", "GioHang");
 
 
-            }   
+            }
             else
                 return RedirectToAction("Login", "User");
         }
 
 
         [HttpPost]
-        public JsonResult ThanhToan( string address)
+        public JsonResult ThanhToan(string address)
         {
             try
             {
@@ -166,90 +166,166 @@ namespace GameStore.Controllers
 
                 }
                 Session["ShoppingCart"] = null;
-                return Json("succes",JsonRequestBehavior.AllowGet);
+                return Json("succes", JsonRequestBehavior.AllowGet);
 
             }
             catch (Exception ex)
             {
                 return Json(ex, JsonRequestBehavior.AllowGet);
             }
-           
-           
-           
+
+
+
 
         }
-		//=============================
-		public ActionResult Payment()
-		{
-			List<Cart> ShoppingCart = Session["ShoppingCart"] as List<Cart>;
-			return View(ShoppingCart); // Đảm bảo trả về một IEnumerable<Cart> không null		
-                                   }
+        //=============================
+        public ActionResult Payment()
+        {
+            // Lấy giỏ hàng từ session
+            List<Cart> ShoppingCart = Session["ShoppingCart"] as List<Cart>;
 
-			[HttpPost]
-		public ActionResult ProcessPayment(string fullName, decimal amount)
-		{
-			var apiContext = new APIContext(new OAuthTokenCredential(
-				System.Configuration.ConfigurationManager.AppSettings["PayPal:ClientId"],
-				System.Configuration.ConfigurationManager.AppSettings["PayPal:ClientSecret"]).GetAccessToken());
+            // Giả sử bạn đã lưu thông tin khách hàng trong session
+            if (Session["hoTen"] != null && Session["sdt"] != null)
+            {
+                // Truyền hoTen và sdt qua ViewBag
+                ViewBag.HoTen = Session["hoTen"].ToString();
+                ViewBag.Sdt = Session["sdt"].ToString();
+            }
 
-			var payer = new Payer() { payment_method = "paypal" };
+            // Đảm bảo trả về một IEnumerable<Cart> không null
+            return View(ShoppingCart ?? new List<Cart>());
+        }
 
-			var redirectUrls = new RedirectUrls()
-			{
-				cancel_url = Url.Action("Cancel", "GioHang", null, Request.Url.Scheme),
-				return_url = Url.Action("Success", "GioHang", null, Request.Url.Scheme)
-			};
+        [HttpPost]
+        public ActionResult ProcessPayment(string fullName, decimal amount)
+        {
+            var apiContext = new APIContext(new OAuthTokenCredential(
+                System.Configuration.ConfigurationManager.AppSettings["PayPal:ClientId"],
+                System.Configuration.ConfigurationManager.AppSettings["PayPal:ClientSecret"]).GetAccessToken());
 
-			var itemList = new ItemList() { items = new List<Item>() };
-			itemList.items.Add(new Item()
-			{
-				name = "Đơn hàng của " + fullName,
-				currency = "USD",
-				price = amount.ToString(),
-				quantity = "1",
-				sku = "sku"
-			});
+            var payer = new Payer() { payment_method = "paypal" };
 
-			var amountDetails = new Amount() { currency = "USD", total = amount.ToString() };
+            var redirectUrls = new RedirectUrls()
+            {
+                cancel_url = Url.Action("Cancel", "GioHang", null, Request.Url.Scheme),
+                return_url = Url.Action("Success", "GioHang", null, Request.Url.Scheme)
+            };
 
-			var transactionList = new List<Transaction>()
-		{
-			new Transaction()
-			{
-				description = "Thanh toán đơn hàng",
-				invoice_number = Guid.NewGuid().ToString(), // Thay thế bằng mã đơn hàng của bạn
+            var itemList = new ItemList() { items = new List<Item>() };
+            itemList.items.Add(new Item()
+            {
+                name = "Đơn hàng của " + fullName,
+                currency = "USD",
+                price = amount.ToString(),
+                quantity = "1",
+                sku = "sku"
+            });
+
+            var amountDetails = new Amount() { currency = "USD", total = amount.ToString() };
+
+            var transactionList = new List<Transaction>()
+        {
+            new Transaction()
+            {
+                description = "Thanh toán đơn hàng",
+                invoice_number = Guid.NewGuid().ToString(), // Thay thế bằng mã đơn hàng của bạn
                 amount = amountDetails,
-				item_list = itemList
-			}
-		};
+                item_list = itemList
+            }
+        };
 
-			var payment = new Payment()
-			{
-				intent = "sale",
-				payer = payer,
-				transactions = transactionList,
-				redirect_urls = redirectUrls
-			};
+            var payment = new Payment()
+            {
+                intent = "sale",
+                payer = payer,
+                transactions = transactionList,
+                redirect_urls = redirectUrls
+            };
 
-			var createdPayment = payment.Create(apiContext);
+            var createdPayment = payment.Create(apiContext);
 
-			// Chuyển hướng người dùng tới PayPal
-			var approvalUrl = createdPayment.links.FirstOrDefault(x => x.rel.ToLower().Trim() == "approval_url").href;
+            // Chuyển hướng người dùng tới PayPal
+            var approvalUrl = createdPayment.links.FirstOrDefault(x => x.rel.ToLower().Trim() == "approval_url").href;
 
-			return Redirect(approvalUrl);
-		}
+            return Redirect(approvalUrl);
+        }
 
-		public ActionResult Success()
-		{
-			// Xử lý thanh toán thành công (cập nhật trạng thái đơn hàng, v.v.)
-			return View();
-		}
+        public ActionResult Success(string paymentId, string token, string PayerID)
+        {
+            try
+            {
+                // Lấy thông tin giỏ hàng từ session
+                List<Cart> ShoppingCart = Session["ShoppingCart"] as List<Cart>;
 
-		public ActionResult Cancel()
-		{
-			// Xử lý khi người dùng hủy thanh toán
-			return View();
-		}
+                if (ShoppingCart == null || !ShoppingCart.Any())
+                {
+                    return RedirectToAction("Index", "GioHang");
+                }
 
-	}
+                string username = "";
+                if (Session["userLogin"] != null)
+                {
+                    username = (string)Session["userLogin"];
+                }
+
+                int soLuong = ShoppingCart.Count();
+                string maDonHang = Guid.NewGuid().ToString();
+
+                // Tạo đơn hàng mới với tổng tiền là 0₫ và trạng thái "Đã thanh toán"
+                var donhang = new DonHang
+                {
+                    trangThai = "Đã thanh toán",
+                    tongTien = 0,  // Tổng tiền thành 0₫
+                    username = username,
+                    soLuong = soLuong,
+                    diachi = "Địa chỉ giao hàng từ PayPal",  // Bạn có thể lấy địa chỉ từ API của PayPal
+                    maDH = maDonHang,
+                    ghiChu = "Thanh toán trực tuyến đã hoàn tất.",  // Ghi chú là đã thanh toán
+                    createdAt = DateTime.Now,
+                    updatedAt = DateTime.Now,
+                    MaKhuyenMai = 1
+                };
+
+                // Lưu đơn hàng vào database
+                db.Configuration.ValidateOnSaveEnabled = false;
+                db.DonHangs.Add(donhang);
+                db.SaveChanges();
+
+                // Lưu chi tiết đơn hàng
+                foreach (var item in ShoppingCart)
+                {
+                    var chitiet = new ChiTietDonHang
+                    {
+                        maDH = maDonHang,
+                        maSP = item.Id,
+                        soLuong = item.Amount,
+                        tongTien = 0  // Tổng tiền cho mỗi sản phẩm cũng là 0₫
+                    };
+
+                    db.ChiTietDonHangs.Add(chitiet);
+                }
+
+                db.SaveChanges();
+
+                // Xóa giỏ hàng sau khi thanh toán thành công
+                Session["ShoppingCart"] = null;
+
+                return View();
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi nếu có
+                return View("Error", new HandleErrorInfo(ex, "GioHang", "Success"));
+            }
+        }
+
+
+
+        public ActionResult Cancel()
+        {
+            // Xử lý khi người dùng hủy thanh toán
+            return View();
+        }
+
+    }
 }
