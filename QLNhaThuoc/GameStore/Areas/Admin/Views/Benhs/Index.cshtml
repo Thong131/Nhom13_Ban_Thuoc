@@ -1,0 +1,40 @@
+﻿@model IEnumerable<GameStore.Models.Benh>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/layoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tenBenh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.moTa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tenBenh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.moTa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.maBenh }) |
+            @Html.ActionLink("Details", "Details", new { id=item.maBenh }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.maBenh })
+        </td>
+    </tr>
+}
+
+</table>

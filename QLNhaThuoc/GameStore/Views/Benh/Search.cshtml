@@ -1,0 +1,37 @@
+﻿@model IEnumerable<GameStore.Models.Benh>
+
+<h2>Kết quả tìm kiếm</h2>
+
+<form action="@Url.Action("Search", "Benh")" method="get">
+    <input type="text" name="keyword" placeholder="Nhập từ khóa tìm kiếm" />
+    <input type="submit" value="Tìm kiếm" />
+</form>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tên Bệnh</th>
+                <th>Mô Tả</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.tenBenh)</td>
+                    <td>@Html.DisplayFor(modelItem => item.moTa)</td>
+                    <td>
+                        @Html.ActionLink("Chi tiết", "Details", new { id = item.maBenh })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Không tìm thấy kết quả nào.</p>
+}

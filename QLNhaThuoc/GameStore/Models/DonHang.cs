@@ -25,7 +25,6 @@ namespace GameStore.Models
         public string username { get; set; }
         public string diachi { get; set; }
         public string ghiChu { get; set; }
-
         public int MaKhuyenMai { get; set; }
         public double tongTien { get; set; }
         public int soLuong { get; set; }
