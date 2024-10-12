@@ -84,40 +84,44 @@
 
             @foreach (var item in Model)
             {
-            <div class="donhang">
-                <div class="maDH">Mã đơn hàng: #@item.maDH</div>
-                @foreach (var i in item.ChiTietDonHangs)
-                {
-                    <div class="bill-item">
+                <div class="donhang">
+                    <div class="maDH">Mã đơn hàng: #@item.maDH</div>
+                    @foreach (var i in item.ChiTietDonHangs)
+                    {
+                        <div class="bill-item">
 
-                        <div class="item">
-                            <div class="img-product">
-                                <img src="~/UploadFile/@i.SanPham.hinhAnh1" alt="" />
+                            <div class="item">
+                                <div class="img-product">
+                                    <img src="~/UploadFile/@i.SanPham.hinhAnh1" alt="" />
+                                </div>
+                                <div class="info">
+                                    <div class="info-name"><span>Tên sản phẩm:  </span>@i.SanPham.tenSP</div>
+                                    <div class="info-price"><span>Giá: </span>@i.SanPham.giaTien,000đ</div>
+                                    <div class="info-qty"><span>Số lượng: </span> @i.soLuong</div>
+                                    <div class="info-total"><span>Tổng: </span> @i.tongTien,000đ</div>
+                                </div>
                             </div>
-                            <div class="info">
-                                <div class="info-name"><span>Tên sản phẩm:  </span>@i.SanPham.tenSP</div>
-                                <div class="info-price"><span>Giá: </span>@i.SanPham.giaTien,000đ</div>
-                                <div class="info-qty"><span>Số lượng: </span> @i.soLuong</div>
-                                <div class="info-total"><span>Tổng: </span> @i.tongTien,000đ</div>
-                            </div>
+
+
+
                         </div>
+                    }
 
 
 
-                    </div>
-                }
+                    <div class="total-money"><span>Tổng cộng:</span> @item.tongTien,000đ</div>
+                    <div class="total-money"><span>Trạng thái đơn hàng:</span> @item.trangThai</div>
+                    @if (@item.trangThai == "Đang chờ" || item.trangThai == "Đã xác nhận")
+                    {
+                        <button maDH="@item.maDH" class="btn btnHuyDonHang ml-4 btn-danger" type="button">Hủy đơn hàng</button>
+                    }
+                </div>
 
 
-
-                <div class="total-money"><span>Tổng cộng:</span> @item.tongTien,000đ</div>
-                <div class="total-money"><span>Trạng thái đơn hàng:</span> @item.trangThai</div>
-                @if (@item.trangThai == "Đang chờ" || item.trangThai == "Đã xác nhận")
-                {
-                    <button maDH="@item.maDH" class="btn btnHuyDonHang ml-4 btn-danger" type="button">Hủy đơn hàng</button>
-                }
-            </div>
-
-               
+                <!-- Liên kết xuất hóa đơn PDF -->
+                <div class="mt-2">
+                    <a href="@Url.Action("XuatHoaDonPDF", "Home", new { maDH = item.maDH })" class="btn btn-primary">Xuất Hóa Đơn PDF</a>
+                </div>
             }
         </div>
 
