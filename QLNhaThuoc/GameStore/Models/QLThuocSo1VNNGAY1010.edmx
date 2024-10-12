@@ -162,16 +162,6 @@
           <Property Name="hinhAnh3" Type="nvarchar" MaxLength="700" />
           <Property Name="hinhAnh4" Type="nvarchar" MaxLength="700" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
         <EntityType Name="ThanhToan">
           <Key>
             <PropertyRef Name="MaThanhToan" />
@@ -415,7 +405,6 @@
           <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PhanQuyen" EntityType="Self.PhanQuyen" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ThanhToan" EntityType="Self.ThanhToan" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__BinhLuan__MaNguo__5CD6CB2B" Association="Self.FK__BinhLuan__MaNguo__5CD6CB2B">
             <End Role="NguoiDung" EntitySet="NguoiDung" />
@@ -687,16 +676,6 @@
           <NavigationProperty Name="HinhAnhs" Relationship="Self.FK__HinhAnh__maSP__6477ECF3" FromRole="SanPham" ToRole="HinhAnh" />
           <NavigationProperty Name="NhaCungCap" Relationship="Self.FK__SanPham__MaNhaCu__47DBAE45" FromRole="SanPham" ToRole="NhaCungCap" />
         </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
         <EntityType Name="ThanhToan">
           <Key>
             <PropertyRef Name="MaThanhToan" />
@@ -941,7 +920,6 @@
           <EntitySet Name="NhaCungCaps" EntityType="Self.NhaCungCap" />
           <EntitySet Name="PhanQuyens" EntityType="Self.PhanQuyen" />
           <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="ThanhToans" EntityType="Self.ThanhToan" />
           <AssociationSet Name="FK__SanPham__maBenh__49C3F6B7" Association="Self.FK__SanPham__maBenh__49C3F6B7">
             <End Role="Benh" EntitySet="Benhs" />
@@ -1191,17 +1169,6 @@
                 <ScalarProperty Name="hinhAnh2" ColumnName="hinhAnh2" />
                 <ScalarProperty Name="hinhAnh3" ColumnName="hinhAnh3" />
                 <ScalarProperty Name="hinhAnh4" ColumnName="hinhAnh4" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="QLThuocSo1VNNGAY1010Model.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

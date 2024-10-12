@@ -192,16 +192,6 @@
     <NavigationProperty Name="HinhAnhs" Relationship="Self.FK__HinhAnh__maSP__6477ECF3" FromRole="SanPham" ToRole="HinhAnh" />
     <NavigationProperty Name="NhaCungCap" Relationship="Self.FK__SanPham__MaNhaCu__47DBAE45" FromRole="SanPham" ToRole="NhaCungCap" />
   </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
   <EntityType Name="ThanhToan">
     <Key>
       <PropertyRef Name="MaThanhToan" />
@@ -446,7 +436,6 @@
     <EntitySet Name="NhaCungCaps" EntityType="Self.NhaCungCap" />
     <EntitySet Name="PhanQuyens" EntityType="Self.PhanQuyen" />
     <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="ThanhToans" EntityType="Self.ThanhToan" />
     <AssociationSet Name="FK__SanPham__maBenh__49C3F6B7" Association="Self.FK__SanPham__maBenh__49C3F6B7">
       <End Role="Benh" EntitySet="Benhs" />
