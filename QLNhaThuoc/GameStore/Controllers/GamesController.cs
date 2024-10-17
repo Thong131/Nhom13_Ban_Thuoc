@@ -47,15 +47,47 @@ namespace GameStore.Controllers
 
         public ActionResult ChiTietSP(int? id)
         {
-           if(id== null) 
-          return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
+            if (id == null)
+                return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
 
-            var thuoc = from sp in db.SanPhams
-                       where sp.maSP == id
-                       select sp;
-            var query = thuoc.Include("DanhMuc").Include("HinhAnhs");
-                 
-            return View(query.ToList());
+            var thuoc = db.SanPhams.Include("DanhMuc").Include("HinhAnhs").FirstOrDefault(sp => sp.maSP == id);
+            if (thuoc == null)
+                return HttpNotFound();
+
+            var binhLuans = db.BinhLuans.Include("NguoiDung").Where(bl => bl.maSP == id).ToList();
+
+            ViewBag.BinhLuans = binhLuans; // Gửi danh sách bình luận sang View
+            return View(thuoc);
+        }
+
+        [HttpPost]
+        public ActionResult AddComment(int maSP, string NoiDung)
+        {
+            if (Session["userLogin"] == null)
+            {
+                return RedirectToAction("Login", "User");
+            }
+
+            string username = Session["userLogin"].ToString();
+            var nguoiDung = db.NguoiDungs.FirstOrDefault(nd => nd.username == username);
+
+            if (nguoiDung == null)
+            {
+                return RedirectToAction("Index", "LoginUser");
+            }
+
+            BinhLuan binhLuan = new BinhLuan
+            {
+                maSP = maSP,
+                MaNguoiDung = nguoiDung.maNguoiDung,
+                NoiDung = NoiDung,
+                NgayBinhLuan = DateTime.Now
+            };
+
+            db.BinhLuans.Add(binhLuan);
+            db.SaveChanges();
+
+            return RedirectToAction("ChiTietSP", new { id = maSP });
         }
 
 
