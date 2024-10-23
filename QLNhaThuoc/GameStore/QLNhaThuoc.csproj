@@ -198,8 +198,8 @@
     <Compile Include="Areas\Admin\Controllers\NguoiDungController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamController.cs" />
     <Compile Include="Common\Common.cs" />
+    <Compile Include="Controllers\KiemTraSucKhoeController.cs" />
     <Compile Include="Controllers\BenhController.cs" />
-    <Compile Include="Controllers\Class1.cs" />
     <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -209,69 +209,69 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Benh.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BinhLuan.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\ChiTietDonHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChiTietGioHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DanhGia.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DanhMuc.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DonHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GiamGia.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GioHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\HinhAnh.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KhuyenMai.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NguoiDung.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NhaCungCap.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhanQuyen.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLNhaThuocSo1VNNGAY1010.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLNhaThuocSo1VNNGAY1010.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLNhaThuocSo1VNNGAY1010.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\SanPham.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ShopeePayConfig.cs" />
     <Compile Include="Models\ThanhToan.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -287,15 +287,15 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\cothenguoi.jpg" />
-    <Content Include="Models\Model1.Context.tt">
+    <Content Include="Models\QLNhaThuocSo1VNNGAY1010.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.edmx</DependentUpon>
+      <LastGenOutput>QLNhaThuocSo1VNNGAY1010.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Model1.tt">
+    <Content Include="Models\QLNhaThuocSo1VNNGAY1010.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.edmx</DependentUpon>
+      <LastGenOutput>QLNhaThuocSo1VNNGAY1010.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -326,12 +326,12 @@
     <Content Include="Areas\Admin\Views\Benhs\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Benhs\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Benhs\Index.cshtml" />
-    <EntityDeploy Include="Models\Model1.edmx">
+    <EntityDeploy Include="Models\QLNhaThuocSo1VNNGAY1010.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>QLNhaThuocSo1VNNGAY1010.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <Content Include="Models\QLNhaThuocSo1VNNGAY1010.edmx.diagram">
+      <DependentUpon>QLNhaThuocSo1VNNGAY1010.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\checkout.js" />
@@ -371,6 +371,10 @@
     <Content Include="Views\Benh\Index.cshtml" />
     <Content Include="Views\Benh\Search.cshtml" />
     <Content Include="Views\Benh\Details.cshtml" />
+    <Content Include="Views\KiemTraSucKhoe\Index.cshtml" />
+    <Content Include="Views\KiemTraSucKhoe\KhaoSat.cshtml" />
+    <Content Include="Views\KiemTraSucKhoe\KetQuaKhaoSat.cshtml" />
+    <Content Include="Views\KiemTraSucKhoe\KetQuaTraVe.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

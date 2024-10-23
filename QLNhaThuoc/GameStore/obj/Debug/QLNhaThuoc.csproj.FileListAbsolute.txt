@@ -444,7 +444,6 @@ C:\Users\ADMIN\Desktop\DAPM-COTRANG\QLNhaThuoc\QLNhaThuoc\GameStore\bin\System.W
 C:\Users\ADMIN\Desktop\DAPM-COTRANG\QLNhaThuoc\QLNhaThuoc\GameStore\bin\Twilio.xml
 C:\Users\ADMIN\Desktop\DAPM-COTRANG\QLNhaThuoc\QLNhaThuoc\GameStore\bin\Antlr3.Runtime.pdb
 C:\Users\ADMIN\Desktop\DAPM-COTRANG\QLNhaThuoc\QLNhaThuoc\GameStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\ADMIN\Desktop\DAPM-COTRANG\QLNhaThuoc\QLNhaThuoc\GameStore\obj\Debug\QLNhaThuoc.csproj.CopyComplete
 C:\Users\ADMIN\Desktop\DAPM-COTRANG\QLNhaThuoc\QLNhaThuoc\GameStore\obj\Debug\GameStore.dll
 C:\Users\ADMIN\Desktop\DAPM-COTRANG\QLNhaThuoc\QLNhaThuoc\GameStore\obj\Debug\GameStore.pdb
 C:\Users\PC\Downloads\QLNhaThuoc\QLNhaThuoc\QLNhaThuoc\QLNhaThuoc\GameStore\bin\GameStore.dll.config
@@ -1030,3 +1029,8 @@ C:\Users\PC\Downloads\QLBanThuoc\QLNhaThuoc\GameStore\bin\Twilio.xml
 C:\Users\PC\Downloads\QLBanThuoc\QLNhaThuoc\GameStore\bin\Antlr3.Runtime.pdb
 C:\Users\PC\Downloads\QLBanThuoc\QLNhaThuoc\GameStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\PC\Downloads\QLBanThuoc\QLNhaThuoc\GameStore\obj\Debug\QLNhaThuoc.csproj.CopyComplete
+C:\Users\ADMIN\Desktop\DAPM-COTRANG\QLNhaThuoc\QLNhaThuoc\GameStore\bin\BouncyCastle.Cryptography.dll
+C:\Users\ADMIN\Desktop\DAPM-COTRANG\QLNhaThuoc\QLNhaThuoc\GameStore\bin\itextsharp.dll
+C:\Users\ADMIN\Desktop\DAPM-COTRANG\QLNhaThuoc\QLNhaThuoc\GameStore\bin\BouncyCastle.Cryptography.xml
+C:\Users\ADMIN\Desktop\DAPM-COTRANG\QLNhaThuoc\QLNhaThuoc\GameStore\bin\itextsharp.xml
+C:\Users\ADMIN\Desktop\DAPM-COTRANG\QLNhaThuoc\QLNhaThuoc\GameStore\obj\Debug\QLNhaThuoc.csproj.Up2Date

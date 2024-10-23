@@ -5,12 +5,12 @@
         <div class="col-md-12">
             <h2>Chi tiết bệnh: @Html.DisplayFor(model => model.tenBenh)</h2>
             <div style="margin-bottom: 50px" class="card mt-3">
-                <div  class="card-body">
+                <div class="card-body">
                     <h5 class="card-title">Tên bệnh: @Html.DisplayFor(model => model.tenBenh)</h5>
                     <p class="card-text">
                         <strong>Mô tả bệnh:</strong> @Html.DisplayFor(model => model.moTa)
                     </p>
-                    <a  href="@Url.Action("Index", "Benh")" class="btn btn-secondary">Quay Lại</a>
+                    <a href="@Url.Action("Index", "Benh")" class="btn btn-secondary">Quay Lại</a>
                 </div>
             </div>
         </div>

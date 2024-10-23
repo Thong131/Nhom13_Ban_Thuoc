@@ -19,10 +19,9 @@
                         {
                             var item = Model.ElementAt(i);
                             <div class="list-group-item">
-                                <h5 class="list-group-item-heading">@Html.DisplayFor(modelItem => item.tenBenh)</h5>
-                                <a href="@Url.Action("Details", "Benh", new { id = item.maBenh })" class="btn btn-primary">
-                                    Xem chi tiết
-                                </a>
+                                <h5 class="list-group-item-heading">
+                                    <a href="@Url.Action("Details", "Benh", new { id = item.maBenh })">@Html.DisplayFor(modelItem => item.tenBenh)</a>
+                                </h5>
                             </div>
                         }
                     </div>
@@ -35,10 +34,9 @@
                         {
                             var item = Model.ElementAt(i);
                             <div class="list-group-item">
-                                <h5 class="list-group-item-heading">@Html.DisplayFor(modelItem => item.tenBenh)</h5>
-                                <a href="@Url.Action("Details", "Benh", new { id = item.maBenh })" class="btn btn-primary">
-                                    Xem chi tiết
-                                </a>
+                                <h5 class="list-group-item-heading">
+                                    <a href="@Url.Action("Details", "Benh", new { id = item.maBenh })">@Html.DisplayFor(modelItem => item.tenBenh)</a>
+                                </h5>
                             </div>
                         }
                     </div>
@@ -60,4 +58,14 @@
         justify-content: space-between; /* Căn chỉnh nội dung bên trong */
         align-items: center; /* Căn giữa theo chiều dọc */
     }
+
+    .list-group-item-heading a {
+        text-decoration: none; /* Bỏ gạch chân của link */
+        color: black; /* Chuyển màu chữ thành màu đen */
+    }
+
+        .list-group-item-heading a:hover {
+            text-decoration: underline; /* Thêm gạch chân khi hover */
+            color: #28a745; /* Màu xanh khi hover */
+        }
 </style>
