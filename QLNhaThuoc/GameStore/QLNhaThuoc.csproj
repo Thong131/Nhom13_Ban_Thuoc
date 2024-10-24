@@ -209,69 +209,72 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Benh.cs">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BinhLuan.cs">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\ChiTietDonHang.cs">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChiTietGioHang.cs">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DanhGia.cs">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DanhMuc.cs">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DonHang.cs">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GiamGia.cs">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GioHang.cs">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\HinhAnh.cs">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KhuyenMai.cs">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NguoiDung.cs">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NhaCungCap.cs">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhanQuyen.cs">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\QLNhaThuocSo1VNNGAY1010.Context.cs">
+    <Compile Include="Models\QLThuocSo1VN.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.Context.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\QLNhaThuocSo1VNNGAY1010.cs">
+    <Compile Include="Models\QLThuocSo1VN.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\QLNhaThuocSo1VNNGAY1010.Designer.cs">
+    <Compile Include="Models\QLThuocSo1VN.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.edmx</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\SanPham.cs">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ShopeePayConfig.cs" />
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ThanhToan.cs">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.tt</DependentUpon>
+      <DependentUpon>QLThuocSo1VN.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -286,16 +289,23 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\235861.png" />
+    <Content Include="Images\cod.png" />
     <Content Include="Images\cothenguoi.jpg" />
-    <Content Include="Models\QLNhaThuocSo1VNNGAY1010.Context.tt">
+    <Content Include="Images\fa.png" />
+    <Content Include="Images\images.jpg" />
+    <Content Include="Images\mastercard.png" />
+    <Content Include="Images\twitter.png" />
+    <Content Include="Images\visa.png" />
+    <Content Include="Models\QLThuocSo1VN.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.edmx</DependentUpon>
-      <LastGenOutput>QLNhaThuocSo1VNNGAY1010.Context.cs</LastGenOutput>
+      <DependentUpon>QLThuocSo1VN.edmx</DependentUpon>
+      <LastGenOutput>QLThuocSo1VN.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\QLNhaThuocSo1VNNGAY1010.tt">
+    <Content Include="Models\QLThuocSo1VN.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.edmx</DependentUpon>
-      <LastGenOutput>QLNhaThuocSo1VNNGAY1010.cs</LastGenOutput>
+      <DependentUpon>QLThuocSo1VN.edmx</DependentUpon>
+      <LastGenOutput>QLThuocSo1VN.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -326,12 +336,12 @@
     <Content Include="Areas\Admin\Views\Benhs\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Benhs\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Benhs\Index.cshtml" />
-    <EntityDeploy Include="Models\QLNhaThuocSo1VNNGAY1010.edmx">
+    <EntityDeploy Include="Models\QLThuocSo1VN.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QLNhaThuocSo1VNNGAY1010.Designer.cs</LastGenOutput>
+      <LastGenOutput>QLThuocSo1VN.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\QLNhaThuocSo1VNNGAY1010.edmx.diagram">
-      <DependentUpon>QLNhaThuocSo1VNNGAY1010.edmx</DependentUpon>
+    <Content Include="Models\QLThuocSo1VN.edmx.diagram">
+      <DependentUpon>QLThuocSo1VN.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\checkout.js" />

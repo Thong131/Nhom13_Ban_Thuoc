@@ -1,14 +1,68 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ADMIN\\Desktop\\DAPM-COTRANG\\QLNhaThuoc\\QLNhaThuoc\\",
+  "WorkspaceRootPath": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|c:\\users\\admin\\desktop\\dapm-cotrang\\qlnhathuoc\\qlnhathuoc\\gamestore\\views\\games\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\gamestore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|solutionrelative:gamestore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\gamestore\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|solutionrelative:gamestore\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|c:\\users\\ron\\desktop\\qlnhathuoc\\qlnhathuoc\\gamestore\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|solutionrelative:gamestore\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|c:\\users\\ron\\desktop\\qlnhathuoc\\qlnhathuoc\\gamestore\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|solutionrelative:gamestore\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\gamestore\\views\\games\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|solutionrelative:gamestore\\views\\games\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|c:\\users\\admin\\desktop\\dapm-cotrang\\qlnhathuoc\\qlnhathuoc\\gamestore\\models\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|c:\\users\\ron\\desktop\\qlnhathuoc\\qlnhathuoc\\gamestore\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|solutionrelative:gamestore\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\gamestore\\areas\\admin\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|solutionrelative:gamestore\\areas\\admin\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/QuocThong/QLThuocSo1VNNGAY1010/True/SqlTable/dbo.DonHang.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\gamestore\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|solutionrelative:gamestore\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/QuocThong/QLThuocSo1VNNGAY1010/True/SqlTable/dbo.SanPham.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\gamestore\\models\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|solutionrelative:gamestore\\models\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\gamestore\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|solutionrelative:gamestore\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\gamestore\\models\\qlthuocso1vn.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|solutionrelative:gamestore\\models\\qlthuocso1vn.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\gamestore\\controllers\\benhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|solutionrelative:gamestore\\controllers\\benhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\gamestore\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|solutionrelative:gamestore\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\gamestore\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{47585947-0CCD-40AC-9656-74D86A16F748}|GameStore\\QLNhaThuoc.csproj|solutionrelative:gamestore\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/LAPTOP_JULVIGMI/QLThuocSo1VNNGAY1010/True/SqlTable/dbo.Benh.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
@@ -21,55 +75,219 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DonHang.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\DAPM-COTRANG\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Models\\DonHang.cs",
-              "RelativeDocumentMoniker": "GameStore\\Models\\DonHang.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\DAPM-COTRANG\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Models\\DonHang.cs",
-              "RelativeToolTip": "GameStore\\Models\\DonHang.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T14:05:43.312Z",
+              "DocumentIndex": 5,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Views\\User\\Login.cshtml",
+              "RelativeDocumentMoniker": "GameStore\\Views\\User\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Views\\User\\Login.cshtml",
+              "RelativeToolTip": "GameStore\\Views\\User\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T14:00:40.754Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "dbo.Benh [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_JULVIGMI/QLThuocSo1VNNGAY1010/True/SqlTable/dbo.Benh.sql",
-              "ToolTip": "dbo.Benh [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-10-23T14:05:28.364Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Views\\GioHang\\Index.cshtml",
+              "RelativeDocumentMoniker": "GameStore\\Views\\GioHang\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Views\\GioHang\\Index.cshtml",
+              "RelativeToolTip": "GameStore\\Views\\GioHang\\Index.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T14:00:29.231Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Views\\User\\Profile.cshtml",
+              "RelativeDocumentMoniker": "GameStore\\Views\\User\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Views\\User\\Profile.cshtml",
+              "RelativeToolTip": "GameStore\\Views\\User\\Profile.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T13:46:13.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\DAPM-COTRANG\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Views\\Games\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Areas\\Admin\\Views\\DonHang\\Index.cshtml",
+              "RelativeDocumentMoniker": "GameStore\\Areas\\Admin\\Views\\DonHang\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Areas\\Admin\\Views\\DonHang\\Index.cshtml",
+              "RelativeToolTip": "GameStore\\Areas\\Admin\\Views\\DonHang\\Index.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAACQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T13:34:53.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Views\\Games\\Index.cshtml",
               "RelativeDocumentMoniker": "GameStore\\Views\\Games\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\DAPM-COTRANG\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Views\\Games\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Views\\Games\\Index.cshtml",
               "RelativeToolTip": "GameStore\\Views\\Games\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAowCcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-23T14:01:20.557Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GioHangController.cs",
+              "DocumentMoniker": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Controllers\\GioHangController.cs",
+              "RelativeDocumentMoniker": "GameStore\\Controllers\\GioHangController.cs",
+              "ToolTip": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Controllers\\GioHangController.cs",
+              "RelativeToolTip": "GameStore\\Controllers\\GioHangController.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAAAIwBYBAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T13:29:13.357Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "GameStore\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "GameStore\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAEIBAAAAAAAAAAAAAE8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T13:40:42.521Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "dbo.DonHang [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/QuocThong/QLThuocSo1VNNGAY1010/True/SqlTable/dbo.DonHang.sql",
+              "ToolTip": "dbo.DonHang [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-24T13:37:39.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "dbo.SanPham.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/QuocThong/QLThuocSo1VNNGAY1010/True/SqlTable/dbo.SanPham.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/QuocThong/QLThuocSo1VNNGAY1010/True/SqlTable/dbo.SanPham.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-24T13:25:26.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "GameStore\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "GameStore\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T13:22:01.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DonHang.cs",
+              "DocumentMoniker": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Models\\DonHang.cs",
+              "RelativeDocumentMoniker": "GameStore\\Models\\DonHang.cs",
+              "ToolTip": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Models\\DonHang.cs",
+              "RelativeToolTip": "GameStore\\Models\\DonHang.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T13:20:11.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "GameStore\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "GameStore\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAewHEAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T13:20:03.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "QLThuocSo1VN.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Models\\QLThuocSo1VN.edmx",
+              "RelativeDocumentMoniker": "GameStore\\Models\\QLThuocSo1VN.edmx",
+              "ToolTip": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Models\\QLThuocSo1VN.edmx [Diagram1]",
+              "RelativeToolTip": "GameStore\\Models\\QLThuocSo1VN.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-10-24T13:18:52.557Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BenhController.cs",
+              "DocumentMoniker": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Controllers\\BenhController.cs",
+              "RelativeDocumentMoniker": "GameStore\\Controllers\\BenhController.cs",
+              "ToolTip": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Controllers\\BenhController.cs",
+              "RelativeToolTip": "GameStore\\Controllers\\BenhController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T13:17:02.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Web.config",
+              "RelativeDocumentMoniker": "GameStore\\Web.config",
+              "ToolTip": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\Web.config",
+              "RelativeToolTip": "GameStore\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAADwAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-24T13:16:06.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\packages.config",
+              "RelativeDocumentMoniker": "GameStore\\packages.config",
+              "ToolTip": "C:\\Users\\Ron\\Desktop\\QLNhaThuoc\\QLNhaThuoc\\GameStore\\packages.config",
+              "RelativeToolTip": "GameStore\\packages.config",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-24T13:15:49.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "dbo.Benh.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_JULVIGMI/QLThuocSo1VNNGAY1010/True/SqlTable/dbo.Benh.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/LAPTOP_JULVIGMI/QLThuocSo1VNNGAY1010/True/SqlTable/dbo.Benh.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-23T14:05:28.364Z"
             }
           ]
         }

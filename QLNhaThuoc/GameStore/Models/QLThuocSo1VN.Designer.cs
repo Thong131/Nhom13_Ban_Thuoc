@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\ADMIN\Desktop\DAPM-COTRANG\QLNhaThuoc\QLNhaThuoc\GameStore\Models\QLNhaThuocSo1VNNGAY1010.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Ron\Desktop\QLNhaThuoc\QLNhaThuoc\GameStore\Models\QLThuocSo1VN.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

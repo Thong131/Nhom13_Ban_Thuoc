@@ -25,4 +25,22 @@
 
     </div>
 
+    <div>
+        <h2>Sản Phẩm Bán Chạy</h2>
+
+        <div class="row">
+            @foreach (var item in Model.OrderByDescending(sp => sp.soLuong).Take(2))
+            {
+                <div class="col-3 mt-2 card-product">
+                    <a href="/games/ChiTietSP/@item.maSP">
+                        <img class="img-product" src="~/UploadFile/@item.hinhAnh1">
+                        <div class="name-product">@item.tenSP</div>
+
+                        <div class="price-product">Giá: @item.giaTien,000 VNĐ</div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+
 </div>

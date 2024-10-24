@@ -20,14 +20,13 @@ namespace GameStore.Models
             this.ChiTietDonHangs = new HashSet<ChiTietDonHang>();
             this.ThanhToans = new HashSet<ThanhToan>();
         }
-    
+        public string Sdt { get; set; }
+        public string HoTen { get; set; }
         public string maDH { get; set; }
         public string username { get; set; }
         public string diachi { get; set; }
         public string ghiChu { get; set; }
-        public string Sdt { get; set; }
-        public string HoTen { get; set; }
-
+        public int? SoLuongMua { get; set; }
         public int MaKhuyenMai { get; set; }
         public double tongTien { get; set; }
         public int soLuong { get; set; }

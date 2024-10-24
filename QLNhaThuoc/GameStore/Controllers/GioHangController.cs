@@ -161,6 +161,7 @@ namespace GameStore.Controllers
                     chitiet.soLuong = item.Amount;
                     chitiet.tongTien = (int)item.Money;
 
+
                     db.ChiTietDonHangs.Add(chitiet);
                     db.SaveChanges();
 

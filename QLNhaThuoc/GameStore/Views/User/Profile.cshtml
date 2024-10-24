@@ -1,82 +1,154 @@
 ﻿@model GameStore.Models.NguoiDung
 
 <style>
-    body {
-        background-color: #f8f9fa;
-        font-family: Arial, sans-serif;
+ 
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    h2 {
-        margin-bottom: 30px;
-        color: #333;
+    /* Card bao bọc form */
+    .card {
+        max-width: 500px; /* Giới hạn độ rộng card */
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px; /* Bo góc */
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng đổ */
+        background-color: #ffffff; /* Màu nền của card */
     }
 
-    .form-group {
+    /* Tiêu đề h2 */
+    .text-center {
+        color: #343a40;
+        font-size: 24px;
+        font-weight: bold;
         margin-bottom: 20px;
     }
 
+    /* Các nhãn form */
+    .form-label {
+        font-weight: bold;
+        color: #495057;
+    }
+
+    /* Input và textbox */
     .form-control {
-        padding: 10px;
         border-radius: 5px;
         border: 1px solid #ced4da;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        transition: border-color 0.3s ease;
     }
 
         .form-control:focus {
-            border-color: #80bdff;
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Hiệu ứng khi focus */
         }
 
+    /* Nút cập nhật */
     .btn-primary {
         background-color: #007bff;
         border-color: #007bff;
-        padding: 10px 20px;
-        border-radius: 5px;
-        color: #fff;
+        padding: 10px;
+        font-size: 16px;
         font-weight: bold;
-        transition: background-color 0.3s;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
     }
 
         .btn-primary:hover {
             background-color: #0056b3;
-            border-color: #0056b3;
         }
 
-    .alert {
-        margin-top: 20px;
+    /* Thông báo thành công */
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+        border-radius: 5px;
+    }
+
+    /* Thông báo lỗi */
+    .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+        border-radius: 5px;
     }
 </style>
 
-<h2 class="text-center">Quản lý thông tin cá nhân</h2>
+@*<h2 class="text-center">Quản lý thông tin cá nhân</h2>
 
-@using (Html.BeginForm("Profile", "User", FormMethod.Post))
-{
-    @Html.AntiForgeryToken()
-
-    <div class="form-group">
-        @Html.LabelFor(m => m.hoTen)
-        @Html.TextBoxFor(m => m.hoTen, new { @class = "form-control" })
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(m => m.email)
-        @Html.TextBoxFor(m => m.email, new { @class = "form-control" })
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(m => m.sdt)
-        @Html.TextBoxFor(m => m.sdt, new { @class = "form-control" })
-    </div>
-
-    <button type="submit" class="btn btn-primary">Cập nhật</button>
-
-    if (ViewBag.Message != null)
+    @using (Html.BeginForm("Profile", "User", FormMethod.Post))
     {
-        <div class="alert alert-success">@ViewBag.Message</div>
-    }
+        @Html.AntiForgeryToken()
 
-    if (ViewBag.Error != null)
-    {
-        <div class="alert alert-danger">@ViewBag.Error</div>
-    }
-}
+        <div class="form-group">
+            @Html.LabelFor(m => m.hoTen)
+            @Html.TextBoxFor(m => m.hoTen, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.email)
+            @Html.TextBoxFor(m => m.email, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.sdt)
+            @Html.TextBoxFor(m => m.sdt, new { @class = "form-control" })
+        </div>
+
+        <button type="submit" class="btn btn-primary">Cập nhật</button>
+
+        if (ViewBag.Message != null)
+        {
+            <div class="alert alert-success">@ViewBag.Message</div>
+        }
+
+        if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger">@ViewBag.Error</div>
+        }
+    }*@
+<div class="container">
+   
+
+    <div class="card shadow-lg">
+        <h2 class="text-center mb-4">Quản lý thông tin cá nhân</h2>
+        <div class="card-body">
+            @using (Html.BeginForm("Profile", "User", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group mb-3">
+                    @Html.LabelFor(m => m.hoTen, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.hoTen, new { @class = "form-control", placeholder = "Nhập họ tên" })
+                </div>
+
+                <div class="form-group mb-3">
+                    @Html.LabelFor(m => m.email, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.email, new { @class = "form-control", placeholder = "Nhập email" })
+                </div>
+
+                <div class="form-group mb-3">
+                    @Html.LabelFor(m => m.sdt, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.sdt, new { @class = "form-control", placeholder = "Nhập số điện thoại" })
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Cập nhật</button>
+
+                if (ViewBag.Message != null)
+                {
+                    <div class="alert alert-success mt-3">@ViewBag.Message</div>
+                }
+
+                if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger mt-3">@ViewBag.Error</div>
+                }
+            }
+        </div>
+    </div>
+</div>
+
