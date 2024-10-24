@@ -1,0 +1,52 @@
+﻿@model IEnumerable<GameStore.Models.DanhGia>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/layoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NoiDung)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayBinhLuan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NguoiDung.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SanPham.tenSP)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NoiDung)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayBinhLuan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NguoiDung.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SanPham.tenSP)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaDanhGia }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaDanhGia }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaDanhGia })
+        </td>
+    </tr>
+}
+
+</table>
