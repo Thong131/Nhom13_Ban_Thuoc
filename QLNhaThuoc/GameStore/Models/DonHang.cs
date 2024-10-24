@@ -22,10 +22,11 @@ namespace GameStore.Models
         }
         public string Sdt { get; set; }
         public string HoTen { get; set; }
+        public string ghiChu { get; set; }
         public string maDH { get; set; }
         public string username { get; set; }
         public string diachi { get; set; }
-        public string ghiChu { get; set; }
+      
         public int? SoLuongMua { get; set; }
         public int MaKhuyenMai { get; set; }
         public double tongTien { get; set; }

@@ -36,6 +36,7 @@
 
 </head>
 <body>
+   
 
 
 
@@ -108,7 +109,7 @@
                         </div>
 
                         <div class="pay form-item">
-                            <a href="/giohang" class="cart">Giỏ hàng</a>
+                            @*<a href="/giohang" class="cart">Giỏ hàng</a>*@
                             <button type="button" class="btnPay" id="save_btn">
                                 THANH TOÁN KHI NHẬN HÀNG
                             </button>
@@ -116,56 +117,102 @@
                                 THANH TOÁN TRỰC TUYẾN
                             </a>
                         </div>
-                       
 
-                       
-                     
-                <div class="checkout-bill">
-                    <div class="checkout-product" id="detailProduct">
 
-                        @foreach (var item in Model)
-                        {
 
-                            <div class="product-item">
-                                <div class="item-img">
-                                    <img src="~/UploadFile/@item.Photo"
-                                         alt=""
-                                         class="img-product" />
-                                    <span class="amount">@item.Amount</span>
-                                </div>
-                                <div class="item-info " style="width:400px;">
-                                    <div class="info-left">
-                                        <div class="info-name-product">
-                                            @item.Name
-                                        </div>
-                                     
-                                    </div>
-                                    <div class="info-right">
-                                        <div class="item-money">@item.Money.ToString("#,##0").Replace(',', '.').000 VND</div>
-                                    </div>
-                                </div>
-                            </div>
-                        }
+
+                        @*<div class="checkout-bill">
+        <div class="checkout-product" id="detailProduct">
+
+            @foreach (var item in Model)
+            {
+
+                <div class="product-item">
+                    <div class="item-img">
+                        <img src="~/UploadFile/@item.Photo"
+                             alt=""
+                             class="img-product" />
                     </div>
-                    <div class="payment">
-                        <div class="payment-total total">
-                            <div class="total-text">Tổng cộng:</div>
-                            @if (Model != null && Model.Count() > 0)
-                            {
-                            <div class="total-text total-money" id="totalMoney">@Model.Sum(m => m.Money).ToString("#,##0").Replace(',', '.').000 VND</div>   
-                            }
-                           
+                    <div class="item-info " style="width:400px;">
+                        <div class="info-left">
+                            <div class="info-name-product">
+                                @item.Name
+                            </div>
+
                         </div>
+                        <div class="info-right">
+                            <div class="item-money">@item.Money.ToString("#,##0").Replace(',', '.').000 VND</div>
+                        </div>
+                    </div>
+                    <div class="payment-total total">
+                        <div class="total-text">Tổng cộng:</div>
+                        @if (Model != null && Model.Count() > 0)
+                        {
+                            <div class="total-text total-money" id="totalMoney">@Model.Sum(m => m.Money).ToString("#,##0").Replace(',', '.').000 VND</div>
+                        }
+
+                    </div>
+                </div>
+            }
+        </div>*@
+                        <div class="checkout-bill">
+                            <div class="checkout-product" id="detailProduct">
+                                @if (Model != null && Model.Any()) // Check if Model is not null and has items
+                                {
+                                    decimal totalAmount = 0; // Initialize a variable to hold the total amount
+
+                                    foreach (var item in Model)
+                                    {
+                                        // Calculate the total price for the current item
+                                        var itemTotal = item.Money * item.Quantity; // Assuming `Quantity` is a property in your model
+                                        totalAmount += itemTotal; // Accumulate total amount
+
+                                        <div class="product-item">
+                                            <div class="item-img">
+                                                <img src="~/UploadFile/@item.Photo" alt="@item.Name" class="img-product" />
+                                            </div>
+                                            <div class="item-info" style="width: 400px;">
+                                                <div class="info-left">
+                                                    <div class="info-name-product">@item.Name</div>
+                                                    <div class="info-quantity">Số lượng: @item.Quantity</div> <!-- Display quantity -->
+                                                </div>
+                                                <div class="info-right">
+                                                    <div class="item-money">@item.Money.ToString("#,##0").Replace(',', '.') VND</div>
+                                                    <div class="item-total">Tổng: @itemTotal.ToString("#,##0").Replace(',', '.') VND</div> <!-- Display item total -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+
+                                    <div class="payment-total total">
+                                        <div class="total-text">Tổng cộng:</div>
+                                        <div class="total-text total-money" id="totalMoney">@totalAmount.ToString("#,##0").Replace(',', '.') VND</div> <!-- Display overall total -->
+                                    </div>
+                                }
+                              
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-            </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    @Scripts.RenderFormat("<script src='{0}' type='module'></script>", "~/bundles/checkout")
+        @Scripts.Render("~/bundles/jquery")
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        @Scripts.RenderFormat("<script src='{0}' type='module'></script>", "~/bundles/checkout")
 
 </body>
 </html>
