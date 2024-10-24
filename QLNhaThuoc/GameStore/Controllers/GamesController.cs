@@ -55,6 +55,13 @@ namespace GameStore.Controllers
                 return HttpNotFound();
 
             var binhLuans = db.BinhLuans.Include("NguoiDung").Where(bl => bl.maSP == id).ToList();
+            var danhGias = db.DanhGias.Where(dg => dg.MaSanPham == id).ToList();
+            double avgRating = 0;
+            if (danhGias.Count > 0)
+            {
+                avgRating = danhGias.Average(dg => Convert.ToDouble(dg.NoiDung)); // Assuming NoiDung stores the rating as a string
+            }
+            ViewBag.AvgRating = avgRating; // Pass the average rating to the view
 
             ViewBag.BinhLuans = binhLuans; // Gửi danh sách bình luận sang View
             return View(thuoc);
@@ -105,5 +112,53 @@ namespace GameStore.Controllers
 
             return View(query.ToList());
         }
+        [HttpPost]
+        public ActionResult AddRating(int maSP, int rating)
+        {
+            if (Session["userLogin"] == null)
+            {
+                return RedirectToAction("Login", "User");
+            }
+
+            string username = Session["userLogin"].ToString();
+            var nguoiDung = db.NguoiDungs.FirstOrDefault(nd => nd.username == username);
+
+            if (nguoiDung == null)
+            {
+                return RedirectToAction("Index", "LoginUser");
+            }
+
+            // Kiểm tra xem người dùng đã mua sản phẩm chưa
+            var daMuaHang = db.ChiTietDonHangs.Any(ct => ct.maSP == maSP );
+
+            // Kiểm tra xem người dùng đã đánh giá chưa
+            var daDanhGia = db.DanhGias.Any(dg => dg.MaNguoiDung == nguoiDung.maNguoiDung && dg.MaSanPham == maSP);
+
+            if (!daMuaHang)
+            {
+                TempData["ErrorMessage"] = "Bạn chưa mua hàng, không thể đánh giá.";
+                return RedirectToAction("ChiTietSP", new { id = maSP });
+            }
+
+            if (daDanhGia)
+            {
+                TempData["ErrorMessage"] = "Bạn đã đánh giá sản phẩm này rồi.";
+                return RedirectToAction("ChiTietSP", new { id = maSP });
+            }
+
+            DanhGia danhGia = new DanhGia
+            {
+                MaSanPham = maSP,
+                MaNguoiDung = nguoiDung.maNguoiDung,
+                NoiDung = rating.ToString(),
+                NgayBinhLuan = DateTime.Now
+            };
+
+            db.DanhGias.Add(danhGia);
+            db.SaveChanges();
+
+            return RedirectToAction("ChiTietSP", new { id = maSP });
+        }
+
     }
 }

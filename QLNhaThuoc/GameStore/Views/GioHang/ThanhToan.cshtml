@@ -108,12 +108,12 @@
                         </div>
 
                         <div class="pay form-item">
-                            <a href="/giohang" class="cart">Giỏ hàng</a>
+                            <a  href="/giohang" class="cart">Giỏ hàng</a>
                             <button type="button" class="btnPay" id="save_btn">
                                 THANH TOÁN KHI NHẬN HÀNG
                             </button>
-                            <a href="@Url.Action("Payment", "GioHang")" class="btnPay">
-                                THANH TOÁN TRỰC TUYẾN
+                            <a href="@Url.Action("Payment", "GioHang")" class="btnPay" style="color:white;width:140px">
+                               TRỰC TUYẾN
                             </a>
                         </div>
                        
@@ -121,7 +121,7 @@
                        
                      
                 <div class="checkout-bill">
-                    <div class="checkout-product" id="detailProduct">
+                    @*<div class="checkout-product" id="detailProduct">
 
                         @foreach (var item in Model)
                         {
@@ -146,7 +146,7 @@
                                 </div>
                             </div>
                         }
-                    </div>
+                    </div>*@
                     <div class="payment">
                         <div class="payment-total total">
                             <div class="total-text">Tổng cộng:</div>
@@ -166,8 +166,29 @@
     @Scripts.Render("~/bundles/jquery")
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     @Scripts.RenderFormat("<script src='{0}' type='module'></script>", "~/bundles/checkout")
+        <script>
+            $(document).ready(function () {
+                $('#save_btn').click(function () {
+                    var address = $('#address').val();
+                    // Có thể thêm kiểm tra dữ liệu ở đây
 
+                    $.ajax({
+                        type: "POST",
+                        url: "/GioHang/ThanhToan", // Đảm bảo thay thế "YourController" bằng tên controller đúng
+                        data: { address: address },
+                        success: function (response) {
+                            alert(response); // Hiển thị thông báo từ server
+                        },
+                        error: function (xhr, status, error) {
+                            alert("Đã xảy ra lỗi: " + error); // Thông báo lỗi
+                        }
+                    });
+                });
+            });
+
+        </script>
 </body>
+
 </html>
 
 

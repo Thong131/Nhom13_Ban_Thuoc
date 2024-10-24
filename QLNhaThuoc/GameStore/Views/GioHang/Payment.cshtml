@@ -5,7 +5,112 @@
 }
 
 <h2>Thông tin thanh toán</h2>
+<style>
+    h2 {
+        font-size: 36px; /* Tăng kích thước font chữ */
+        color: #333;
+        text-align: center;
+        margin-bottom: 30px;
+    }
 
+    /* Định dạng khung sản phẩm */
+    .product-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #ddd;
+        padding: 30px; /* Tăng padding để khung to hơn */
+        margin-bottom: 20px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+
+    .item-img {
+        display: flex;
+        align-items: center;
+    }
+
+    .img-product {
+        width: 150px; /* Tăng kích thước ảnh sản phẩm */
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 30px; /* Tăng khoảng cách giữa ảnh và thông tin */
+    }
+
+    .amount {
+        font-size: 24px; /* Tăng kích thước font chữ cho số lượng */
+        color: #555;
+        margin-left: 15px;
+    }
+
+    .item-info {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .info-left {
+        flex: 1;
+    }
+
+    .info-name-product {
+        font-size: 28px; /* Tăng kích thước tên sản phẩm */
+        font-weight: bold;
+        color: #333;
+    }
+
+    .info-right {
+        text-align: right;
+    }
+
+    .item-money {
+        font-size: 28px; /* Tăng kích thước font chữ cho giá tiền */
+        color: #e60000;
+        font-weight: bold;
+    }
+
+    /* Tạo kiểu cho phần tổng tiền */
+    div label {
+        font-size: 24px; /* Tăng kích thước font chữ */
+        font-weight: bold;
+        margin-right: 20px;
+    }
+
+    input[type="number"] {
+        font-size: 24px; /* Tăng kích thước ô nhập liệu */
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        width: 200px;
+    }
+
+    /* Tạo kiểu cho nút thanh toán */
+    button {
+        font-size: 24px; /* Tăng kích thước font chữ cho nút */
+        padding: 15px 30px;
+        margin: 20px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        button[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    /* Căn giữa form */
+    form {
+        max-width: 1000px; /* Tăng chiều rộng form */
+        margin: 0 auto;
+    }
+</style>
 <form method="post" action="@Url.Action("ProcessPayment", "GioHang")">
     @foreach (var item in Model)
     {
@@ -35,7 +140,14 @@
         <input type="number" name="amount" value="@Model.Sum(item => item.Money)" readonly required />
     </div>
 
-  
 
-    <button type="submit">Thanh toán qua PayPal</button>
+    <div>
+        <button type="submit"> <img src="~/Images/paypal.png" alt="PayPal Logo" style="width: 40px;border-radius:180px; height: 40px; margin-right: 10px;" />Thanh toán qua PayPal</button>
+        <button type="submit">  <img src="~/Images/momo.png" alt="PayPal Logo" style="width: 40px; border-radius: 180px;border-radius:180px; height: 40px; margin-right: 10px; " />Thanh toán qua MoMo</button>
+        <button type="submit">  <img src="~/Images/zalo.png" alt="PayPal Logo" style="width: 40px; border-radius: 180px; height: 40px; margin-right: 10px; " />Thanh toán qua Zalo Pay</button>
+
+    </div>
+   
+
+
 </form>

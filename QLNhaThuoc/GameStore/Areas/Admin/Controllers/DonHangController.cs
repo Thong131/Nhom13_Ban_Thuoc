@@ -13,10 +13,12 @@ namespace GameStore.Areas.Admin.Controllers
         QLThuocSo1VNNGAY1010Entities db = new QLThuocSo1VNNGAY1010Entities();
         public ActionResult Index()
         {
-            var donhang=db.DonHangs;
-            
-            return View(donhang.ToList());
+            // Lọc danh sách đơn hàng để chỉ lấy những đơn hàng có mã người dùng khác null
+            var donhang = db.DonHangs.Where(dh => dh.maNguoiDung != null).ToList();
+
+            return View(donhang);
         }
+
         public ActionResult ChiTiet(string id)
         {
             var donhang = db.DonHangs.Where(s=>s.maDH==id);

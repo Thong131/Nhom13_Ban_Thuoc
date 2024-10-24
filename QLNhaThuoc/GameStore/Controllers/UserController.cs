@@ -63,22 +63,26 @@ namespace GameStore.Controllers
                     }
                     else
                     {
+                        // Lưu thông tin vào session
                         Session["hoTen"] = check.hoTen;
                         Session["email"] = check.email;
                         Session["sdt"] = check.sdt;
-                        if (check.roleID == 1)
+                        Session["roleID"] = check.roleID;  // Lưu quyền của người dùng
+
+                        if (check.roleID == 1)  // Người dùng bình thường
+                        {
                             Session["userLogin"] = check.username;
-                        else
+                        }
+                        else if (check.roleID == 2)  // Quản trị viên
                         {
                             Session["userLogin"] = check.username;
                             Session["adminLogin"] = check.username;
-                            return RedirectToAction("sanpham", "Admin");
+                            return RedirectToAction("Index", "AdminHome", new { area = "Admin" });
                         }
+
                         return RedirectToAction("Index", "Home");
                     }
                 }
-
-
             }
             return View();
         }

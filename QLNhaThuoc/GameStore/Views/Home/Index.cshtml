@@ -2,6 +2,41 @@
     ViewBag.Title = "Home Page";
 }
 
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        border-spacing: 10px;
+    }
+
+    td {
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        text-align: left;
+        border: 1px solid #ddd;
+        font-weight: bold;
+        border-radius: 6px;
+    }
+
+        td img {
+            margin-right: 10px; /* Khoảng cách giữa ảnh và chữ */
+            width: 30px; /* Điều chỉnh kích thước ảnh */
+            height: 30px; /* Điều chỉnh kích thước ảnh */
+        }
+
+    table td {
+        width: 20%; /* Đảm bảo các cột đều nhau */
+    }
+
+    td:hover {
+        background-color: #f1f1f1;
+    }
+
+</style>
 <div class="header-cus">
     <div class="container">
         <div class="row">
@@ -18,7 +53,41 @@
     </div>
 
 </div>
+<br  style="height:80px;"/>
 
+<div style="width:1100px;justify-content:center;margin:auto;">
+    <table border="1">
+        <tr style="height:90px">
+            <td>
+                <img src="~/Content/img/ktsk.png" />
+                Kiểm tra sức khỏe
+            </td>
+            <td>
+                <a style="color:black;font-size:18px" href="@Url.Action("ViTriNhaThuoc", "Home")">
+
+                    <img src="~/Content/img/nhathuoc.png" />
+                    Nhà thuốc
+                    </a>
+            </td>
+            <td>
+                <a style="color:black;font-size:18px" href="@Url.Action("TiemChung", "Benh")">
+                    <img src="~/Content/img/vacxin.png" alt="Vacxin" />
+                    Vacxin
+                </a>
+            </td>
+
+            <td>
+                <img src="~/Content/img/duocsi.png" />
+                Tư vấn với dược sĩ
+            </td>
+
+            <td>
+                <img src="~/Content/img/thuoccanmua.png" />
+                Cần mua thuốc
+            </td>
+        </tr>
+    </table>
+</div>
 <!---recommended--->
 <div class="recommended">
     <div class="container2">
@@ -37,6 +106,7 @@
 
 </div>
 
+<br style="height:200px;"/>
 <!----featured products------>
 <!--<div class="container2">
     <h2 class="title">Game nổi bật</h2>
@@ -52,7 +122,7 @@
         <div class="col-4">
             <img src="https://images-na.ssl-images-amazon.com/images/I/519-jJh31XL.jpg">
             <h4>Uncharted 4</h4>
-         
+
             <p>Rs.1499</p>
         </div>
         <div class="col-4">
@@ -63,7 +133,7 @@
         </div>
 
     </div>
-  
+
 
 </div>-->
 <!----Gaming Accessories------>
@@ -73,19 +143,19 @@
         <div class="col-4">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3MIJIPb22IWUPdisd_eeO--6WSlslWS8W_A&usqp=CAU">
             <h4>Logitech Headphones</h4>
-           
+
             <p>Rs.6999</p>
         </div>
         <div class="col-4">
             <img src="https://www.bhphotovideo.com/images/images2500x2500/sony_3004379_dualshock_4_wireless_controller_1504381.jpg">
             <h4>Dual Shock 4 Controller</h4>
-           
+
             <p>Rs.4499</p>
         </div>
         <div class="col-4">
             <img src="https://compass-ssl.xbox.com/assets/bd/f1/bdf1a7e3-261a-49dc-a863-0af85f145b8d.jpg?n=111101_Gallery-0_18_1350x759.jpg">
             <h4>Xbox One Controller</h4>
-       
+
             <p>Rs.3999</p>
         </div>
     </div>

@@ -19,7 +19,12 @@ namespace GameStore.Controllers
 
             return View();
         }
-     
+        public ActionResult ViTriNhaThuoc()
+        {
+
+            return View();
+        }
+
         public JsonResult GetData()
         {
             int cartCount = 0;

@@ -125,9 +125,9 @@ namespace GameStore.Controllers
                 List<Cart> ShoppingCart = Session["ShoppingCart"] as List<Cart>;
 
                 string username = "";
-
                 if (Session["userLogin"] != null)
                     username = (string)Session["userLogin"];
+
 
                 double tongTien = 0;
                 int soLuong = ShoppingCart.Count();
@@ -137,9 +137,10 @@ namespace GameStore.Controllers
                 {
                     tongTien += item.Money;
                 }
+                var nguoiDung = db.NguoiDungs.FirstOrDefault(nd => nd.username == username);
 
                 var donhang = new DonHang();
-
+                donhang.maNguoiDung = nguoiDung.maNguoiDung;
                 donhang.trangThai = "Đang chờ";
                 donhang.tongTien = tongTien;
                 donhang.username = username;
@@ -148,6 +149,7 @@ namespace GameStore.Controllers
                 donhang.maDH = maDonHang;
                 donhang.createdAt = DateTime.Now;
                 donhang.updatedAt = DateTime.Now;
+                donhang.MaKhuyenMai = 1;
 
                 db.Configuration.ValidateOnSaveEnabled = false;
                 db.DonHangs.Add(donhang);
@@ -156,11 +158,11 @@ namespace GameStore.Controllers
                 foreach (var item in ShoppingCart)
                 {
                     var chitiet = new ChiTietDonHang();
+                    
                     chitiet.maDH = maDonHang;
                     chitiet.maSP = item.Id;
                     chitiet.soLuong = item.Amount;
                     chitiet.tongTien = (int)item.Money;
-
 
                     db.ChiTietDonHangs.Add(chitiet);
                     db.SaveChanges();
@@ -262,19 +264,21 @@ namespace GameStore.Controllers
                 {
                     return RedirectToAction("Index", "GioHang");
                 }
+                int soLuong = ShoppingCart.Count();
 
                 string username = "";
                 if (Session["userLogin"] != null)
                 {
                     username = (string)Session["userLogin"];
                 }
+                int soLuongNe = ShoppingCart.Count();
 
-                int soLuong = ShoppingCart.Count();
                 string maDonHang = Guid.NewGuid().ToString();
+                var nguoiDung = db.NguoiDungs.FirstOrDefault(nd => nd.username == username);
 
                 // Tạo đơn hàng mới với tổng tiền là 0₫ và trạng thái "Đã thanh toán"
                 var donhang = new DonHang
-                {
+                {    maNguoiDung=nguoiDung.maNguoiDung,
                     trangThai = "Đã thanh toán",
                     tongTien = 0,  // Tổng tiền thành 0₫
                     username = username,
@@ -304,6 +308,13 @@ namespace GameStore.Controllers
                     };
 
                     db.ChiTietDonHangs.Add(chitiet);
+
+                    // Cập nhật số lượng đã bán cho sản phẩm
+                    var sanPham = db.SanPhams.Find(item.Id);
+                    if (sanPham != null)
+                    {
+                        sanPham.soLuong += item.Amount; // Tăng số lượng bán
+                    }
                 }
 
                 db.SaveChanges();

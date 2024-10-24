@@ -4,59 +4,215 @@
     ViewBag.Title = "Chi Tiết Sản Phẩm";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+<head>
+    <style>
+        /* Star rating container */
+        .star-rating {
+            position: relative;
+            font-size: 2rem;
+            direction: rtl; /* Right-to-left for alignment purposes */
+            unicode-bidi: bidi-override;
+        }
 
+        /* Empty stars */
+        .stars::before {
+            content: "☆☆☆☆☆";
+            color: #ddd; /* Gray for empty stars */
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+
+        /* Filled stars */
+        .stars::after {
+            content: "★★★★★";
+            color: #f5b301; /* Yellow for filled stars */
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            width: 0; /* Default to 0, adjusted with JavaScript */
+            overflow: hidden;
+        }
+    </style>
+</head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<body>
 
-<!-- Hiển thị thông tin sản phẩm -->
-<div class="container single-product">
-    <div class="row">
-        <div class="col-5">
-            <img src="~/UploadFile/@Model.hinhAnh1" alt="@Model.tenSP" class="img-fluid" />
-            <!-- Thêm hình ảnh khác nếu cần -->
+    <!-- Hiển thị thông tin sản phẩm -->
+    <div class="container single-product">
+        <div class="row">
+            <div class="col-5">
+                <div class="large-image">
+                    <img src="~/UploadFile/@Model.hinhAnh1" alt="@Model.tenSP" class="img-fluid" />
+                </div>
+                <div class="small-images">
+                    <table>
+                        <tr>
+                            <td class="text-center">
+                                <img src="~/UploadFile/@Model.hinhAnh2" alt="@Model.tenSP" class="img-fluid small-img" />
+                            </td>
+                            <td class="text-center">
+                                <img src="~/UploadFile/@Model.hinhAnh3" alt="@Model.tenSP" class="img-fluid small-img" />
+                            </td>
+                            <td class="text-center">
+                                <img src="~/UploadFile/@Model.hinhAnh4" alt="@Model.tenSP" class="img-fluid small-img" />
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+
+            <style>
+                .large-image img {
+                    width: 100%; /* Đặt chiều rộng của hình lớn là 100% */
+                    height: auto; /* Giữ tỉ lệ khung hình */
+                    margin-bottom: 10px; /* Khoảng cách giữa hình lớn và hình nhỏ */
+                }
+
+                .small-images {
+                    display: flex; /* Sử dụng flexbox để sắp xếp hình ảnh nhỏ */
+                    justify-content: space-between; /* Căn giữa các hình ảnh */
+                }
+
+                .small-img {
+                    width: 100px; /* Chiều rộng của mỗi hình nhỏ, có thể điều chỉnh */
+                    height: 100px; /* Giữ tỉ lệ khung hình */
+                }
+            </style>
+
+
+            <div class="col-7">
+                <h3 style="font-size:24px;font-weight:300;font-family:Arial">@Model.tenSP</h3>
+                <h4 style="color:#1250DC;font-weight:500;font-size:36px;">@Model.giaTien.000 VNĐ</h4>
+                <p>Thành phần thuốc: @Model.thanhPhan</p>
+                <p>
+                    Hạn sử dụng: @Model.hansuDung Ngày
+                </p>
+                <p>
+                    Nhà cung cấp: @Model.NhaCungCap.TenNhaCungCap
+                </p>
+                <p>
+                    <a href="@Url.Action("Details", "Benh", new { tenBenh = Model.Benh.tenBenh })">
+                        Bệnh:  @Model.Benh.tenBenh
+                    </a>
+                </p>
+
+
+
+                <a href="@Url.Action("AddToCart", "GioHang", new { maSP = @Model.maSP })" class="btn btn-success" style="background-color: #1250DC">Thêm vào giỏ hàng</a>
+            </div>
+
         </div>
-        <div class="col-7">
-            <h3>@Model.tenSP</h3>
-            <h4>@Model.giaTien.000 VNĐ</h4>
-            <p>@Model.chitietSP</p>
-            <a href="@Url.Action("AddToCart", "GioHang", new { maSP = @Model.maSP })" class="btn btn-success">Thêm vào giỏ hàng</a>
+        <div>
+            <h4>Mô tả sản phẩm:</h4>
+            @Model.chitietSP
         </div>
-    </div>
+        <hr />
+        <div style="width:1100px">
 
-    <hr />
 
-    @{
-        var binhLuans = ViewBag.BinhLuans as List<GameStore.Models.BinhLuan>; // Chuyển đổi kiểu
-    }
+        </div>
+        @{
+            var binhLuans = ViewBag.BinhLuans as List<GameStore.Models.BinhLuan>; // Chuyển đổi kiểu
+        }
 
-    <div class="MoTaDanhGia">
-        <h3>Bình luận</h3>
-        @if (binhLuans != null && binhLuans.Count > 0) // Sử dụng Count để kiểm tra số lượng
-        {
-            foreach (var binhLuan in binhLuans)
+        <div class="MoTaDanhGia">
+            <h3>Bình luận</h3>
+            @if (binhLuans != null && binhLuans.Count > 0) // Sử dụng Count để kiểm tra số lượng
+            {
+                foreach (var binhLuan in binhLuans)
+                {
+                    <div>
+                        <strong>@binhLuan.NguoiDung.hoTen</strong>
+                        <p>@binhLuan.NoiDung</p>
+                        <small>@binhLuan.NgayBinhLuan.ToString("dd/MM/yyyy HH:mm:ss")</small>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>Chưa có bình luận nào.</p>
+            }
+
+            <h4>Gửi Bình Luận</h4>
+            @using (Html.BeginForm("AddComment", "Games", FormMethod.Post))
+            {
+                @Html.Hidden("maSP", Model.maSP) <!-- Thêm ID sản phẩm vào form -->
+                <div class="form-group">
+                    <label for="NoiDung">Nội dung</label>
+                    <textarea name="NoiDung" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gửi bình luận</button>
+            }
+        </div>
+
+        <div>
+
+
+            <h3>Đánh giá sản phẩm</h3>
+
+            @if (ViewBag.AvgRating == 0)
             {
                 <div>
-                    <strong>@binhLuan.NguoiDung.hoTen</strong>
-                    <p>@binhLuan.NoiDung</p>
-                    <small>@binhLuan.NgayBinhLuan.ToString("dd/MM/yyyy HH:mm:ss")</small>
+                    Chưa có ai đánh giá sản phẩm
                 </div>
             }
-        }
-        else
-        {
-            <p>Chưa có bình luận nào.</p>
-        }
+            else
+            {
+                <div>
+                    <h3>Average Rating: @ViewBag.AvgRating</h3>
+                    <div class="star-rating">
+                        <div class="stars" data-rating="@ViewBag.AvgRating"></div>
+                    </div>
+                </div>
+            }
 
-        <h4>Gửi Bình Luận</h4>
-        @using (Html.BeginForm("AddComment", "Games", FormMethod.Post))
-        {
-            @Html.Hidden("maSP", Model.maSP) <!-- Thêm ID sản phẩm vào form -->
-            <div class="form-group">
-                <label for="NoiDung">Nội dung</label>
-                <textarea name="NoiDung" class="form-control" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Gửi bình luận</button>
-        }
+            @using (Html.BeginForm("AddRating", "Games", FormMethod.Post))
+            {
+                @Html.Hidden("maSP", Model.maSP)
+
+                <div class="form-group">
+                    <label>Số sao:</label>
+                    <div class="star-inputs">
+                        @for (int i = 1; i <= 5; i++)
+                        {
+                            <input type="radio" name="rating" value="@i" id="star@i" required />
+                            <label for="star@i">@i <span class="fa fa-star"></span></label>
+                        }
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Gửi Đánh Giá</button>
+
+
+            }
+
+        </div>
     </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get the star element and the rating data
+        var stars = document.querySelector(".stars");
+        var rating = stars.getAttribute("data-rating");
+
+        // Calculate percentage based on rating
+        var percentage = (rating / 5) * 100;
+
+        // Set the width of the filled stars
+        stars.style.width = percentage + "%";
+    });
+
+</script>

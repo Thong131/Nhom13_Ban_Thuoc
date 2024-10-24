@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity; // Nếu bạn đang sử dụng Entity Framework
+// Hoặc
 
 namespace GameStore.Controllers
 {
@@ -18,23 +20,45 @@ namespace GameStore.Controllers
             var listBenh = from benh in db.Benhs select benh;
             return View(listBenh.ToList());
         }
-
-        // GET: Benh/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult TiemChung()
         {
-            if (id == null)
+            
+            return View();
+        }
+        public ActionResult Benh1()
+        {
+            var benhs = db.Benhs.ToList();
+            return View(benhs);
+        }
+        // GET: Benh/Details/5
+        public ActionResult Details(string tenBenh)
+        {
+            if (string.IsNullOrEmpty(tenBenh))
             {
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
             }
 
-            // Tìm bệnh dựa theo id
-            Benh benh = db.Benhs.Find(id);
+            // Tìm bệnh dựa theo tên bệnh
+            Benh benh = db.Benhs
+                .Include(b => b.SanPhams)
+                .FirstOrDefault(b => b.tenBenh.Equals(tenBenh, StringComparison.OrdinalIgnoreCase)); // So sánh không phân biệt chữ hoa chữ thường
+
             if (benh == null)
             {
                 return HttpNotFound();
             }
 
-            return View(benh);  // Trả về view chi tiết của bệnh
+            // Lấy danh sách sản phẩm khác cùng loại bệnh
+            var danhSachSanPhamKhac = db.SanPhams
+                .Where(sp => sp.maBenh == benh.maBenh && sp.maSP != null)
+                .ToList();
+
+            ViewBag.DanhSachSanPhamKhac = danhSachSanPhamKhac;
+
+            return View(benh);
         }
+
+
+
     }
 }

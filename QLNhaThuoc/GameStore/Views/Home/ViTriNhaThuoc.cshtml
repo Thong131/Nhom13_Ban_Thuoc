@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .search-panel, .info-panel {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-panel {
+            width: 30%;
+        }
+
+        .info-panel {
+            width: 65%;
+        }
+
+        h3 {
+            color: #007bff;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .search-bar input, .search-bar select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .pharmacy-list {
+            list-style: none;
+            padding: 0;
+        }
+
+            .pharmacy-list li {
+                padding: 10px 0;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .pharmacy-list input {
+                margin-right: 10px;
+            }
+
+        .info-section {
+            margin-bottom: 20px;
+        }
+
+            .info-section h4 {
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+            }
+
+                .info-section h4 img {
+                    margin-right: 10px;
+                }
+
+        .gallery {
+            display: flex;
+            gap: 10px;
+        }
+
+            .gallery img {
+                width: 30%;
+                border-radius: 5px;
+            }
+
+        .center-text {
+            text-align: center;
+            margin: 10px 0;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Search Panel -->
+        <div class="search-panel">
+            <h3>Tìm kiếm nhà thuốc</h3>
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm bằng tên đường và tỉnh thành">
+                <p class="center-text">hoặc</p>
+                <select>
+                    <option>Chọn Tỉnh/Thành</option>
+                </select>
+                <select>
+                    <option>Chọn Quận/Huyện</option>
+                </select>
+            </div>
+            <h3>Nhà thuốc gợi ý</h3>
+            <ul class="pharmacy-list">
+                <li>
+                    <input type="radio" name="pharmacy"> 84 Tổ Dân Phố 7, P. Nam Thanh, TP. Điện Biên Phủ, Tỉnh Điện Biên
+                </li>
+                <li>
+                    <input type="radio" name="pharmacy"> 1066-1068 Võ Nguyên Giáp, P. Mường Thanh, TP. Điện Biên Phủ
+                </li>
+                <li>
+                    <input type="radio" name="pharmacy"> 654-656 Võ Nguyên Giáp, P. Tân Thanh, TP. Điện Biên Phủ
+                </li>
+                <li>
+                    <input type="radio" name="pharmacy"> 354 Trường Chinh, P. Mường Thanh, TP. Điện Biên Phủ
+                </li>
+            </ul>
+        </div>
+
+        <div class="info-panel">
+            <h3>Long Châu là hệ thống nhà thuốc bán lẻ & phân phối trải khắp 63 tỉnh thành luôn luôn mở rộng để phục vụ Khách hàng trên toàn quốc, cung cấp dịch vụ bán hàng và phục vụ hàng đầu:</h3>
+            <div class="info-section">
+                <h4 style="color: #000000; font-weight: bold;"><img src="~/Images/istockphoto.jpg" alt="icon" style="width: 40px; height: 40px;"> Nhà thuốc chính hãng</h4>
+                <p>Sở hữu danh mục thuốc chính hãng phong phú và chuyên sâu.</p>
+            </div>
+            <div class="info-section">
+                <h4 style="color: #000000; font-weight: bold;"><img src="~/Images/istockphoto.jpg" alt="icon" style="width: 40px; height: 40px;"> Dược sĩ tư vấn tại chỗ</h4>
+                <p>Với kinh nghiệm và chuyên môn cao với 4 tiêu chí: đúng thuốc, đúng liều, đúng cách và đúng giá.</p>
+            </div>
+            <div class="info-section">
+                <h4 style="color: #000000; font-weight: bold;"><img src="~/Images/istockphoto.jpg" alt="icon" style="width: 40px; height: 40px;"> Giao hàng tận nơi</h4>
+
+                <p>Giao hàng cực nhanh trong khu vực TP.HCM và toàn quốc.</p>
+            </div>
+            <h3>Hình ảnh nhận dạng hệ thống nhà thuốc Long Châu:</h3>
+            <div class="gallery">
+                <img src="~/Images/long-chau.png" alt="Pharmacy Image 1">
+                <img src="~/Images/longchau.jpg" alt="Pharmacy Image 2">
+                <img src="~/Images/longchau1.png" alt="Pharmacy Image 3">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
