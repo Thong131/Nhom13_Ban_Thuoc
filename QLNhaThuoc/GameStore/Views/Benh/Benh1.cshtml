@@ -1,0 +1,32 @@
+﻿
+
+@model IEnumerable<GameStore.Models.Benh>
+
+@{
+    ViewBag.Title = "Danh sách bệnh";
+}
+
+<h2>Danh sách bệnh</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tên bệnh</th>
+            <th>Mô tả</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var benh in Model)
+        {
+            <tr>
+                <td>
+                    <a href="@Url.Action("Details", "Benh", new { tenBenh = benh.tenBenh })">
+                        @benh.tenBenh
+                    </a>
+                </td>
+                <td>@benh.moTa</td>
+              
+            </tr>
+        }
+    </tbody>
+</table>
